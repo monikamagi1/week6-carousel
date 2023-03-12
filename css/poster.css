@@ -1,0 +1,242 @@
+/*import google fonts here*/ @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;0,900;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+    color: #8e411e;
+}
+
+.movie-card {
+    
+    margin-top: 5rem ;
+    height: 800px;
+    text-align: center;
+}
+
+.movie-title {
+    text-transform: uppercase;
+    margin-top: 1rem;
+    transform: translateY(-150px);
+    animation: slide-from-top 3.5s ease-in-out forwards;}
+
+@keyframes slide-from-top {
+    75% {transform: translateY(6px);}
+    100% {transform: translateY(0);}
+
+}
+
+
+.movie-poster-container img {
+    margin-top: 1rem;
+    height:30%/*your code here*/;
+    width: 30%;
+    text-align: center;
+    border-radius:20px/*your code here*/;
+    position: relative;
+    left: -50rem;
+    animation: slide-from-left 3.5s ease-in-out forwards;
+    cursor: pointer;
+}
+
+@keyframes slide-from-left {
+    80% {left: 1.5rem;}
+    100% {left: 0;}
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(70, 61, 61, 0.63);
+    z-index: 2;
+    top: 0;
+    left: 0;
+    text-align: center;
+}
+
+.modal-content {
+    background-color: blanchedalmond;
+    margin: 5% auto;
+    padding: 5rem;
+    width: 600px;
+    height: 600px;
+    animation: zoom-in 1s;
+}
+
+@keyframes zoom-in {
+0% {transform: scale(0);}
+100% {transform: scale(1);}
+}
+
+.closeBtn {
+    float: right;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+.movie-poster-modal {
+    width: 300px;
+}
+
+.movie-poster {
+    width: 300px;
+    cursor: pointer;
+}
+
+.movie-poster-container img:hover {
+    transform: scale(0.9);
+    box-shadow: 12px 12px 12px -3px  red;
+    }
+
+    @keyframes fade-in {
+        100% {opacity: 1;}
+    }
+        .movie-rating {
+            border: 5px solid #6538ec;
+            color: #0d0c0c;
+            padding: 0.3rem;
+            border-radius: 5px;
+        }
+
+.movie-duratin {
+    margin-right: 2rem;
+    letter-spacing: 0.5rem;
+    position:relative;
+}
+    .movie-genres {
+        margin-top: 1.8rem;
+}
+
+.movie-duratin:before {
+       content: "\2022"/*your code here*/;
+}
+
+.movie-info-quote {
+    color: #67625da4;
+    font-style: italic/*your code here*/;
+    font-size: 1.3rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.movie-info-overview-title {
+    text-transform: capitalize/*your code here*/;
+    letter-spacing: 0.2rem;
+}
+
+.movie-info-actions {
+    font-size:1.1rem;
+}
+
+.movie-info-actions ul {
+    list-style: none;
+    margin: 1rem
+}
+
+
+.movie-info-actions ul li {
+    display: inline-block/*your code here*/;
+    margin-right: 1rem;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: rgb(250, 9, 186);
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    
+}
+
+.movie-info-actions ul li a {
+    text-decoration: none /*your code here*/;
+    color: #f6f8f5;
+    padding: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+footer {
+    margin-top: 7rem;
+    text-align: center/*your code here*/;
+    color: #777;
+}
+
+
+
+footer ul {
+    list-style: none;
+}
+
+footer ul li {
+    display: inline-block/*your code here*/;
+    margin-top: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+}
+
+footer ul li a {
+    text-decoration-line:none;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    color: #080a99 ;}
+
+    .container {
+        width: 75%;
+        text-align: center;
+        margin: 0rem auto;
+    }
+    
+    .carousel {
+        max-width: 500px;
+        margin: 0 auto;
+        position: relative;
+    }
+    
+    .carousel img {
+        width: 100%;
+    }
+    
+    .carousel .carousel__item,
+    .carousel .carousel__item--hidden {
+        display: none;
+    }
+    
+    .carousel .carousel__item--visible {
+        display: block;
+        animation: fadeIn .6s;
+    }
+    
+    @keyframes fadeIn {
+        0% {opacity: 0;}
+        100% {opacity: 1;}
+    }
+    
+    .carousel .carousel__actions {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    .carousel .carousel__actions button {
+        border-radius: 50px;
+        cursor: pointer;
+        font-weight: bold;
+        height: 50px;
+        width: 50px;
+        border: 0;
+        background-color: rgb(230, 187, 131);
+        font-size: 2rem;
+        color: aliceblue;
+        margin: 0.1rem;
+    }
